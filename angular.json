@@ -3,5 +3,34 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "shared-utils": {
+      "projectType": "library",
+      "root": "projects/shared-utils",
+      "sourceRoot": "projects/shared-utils/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/shared-utils/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/shared-utils/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:karma",
+          "options": {
+            "tsConfig": "projects/shared-utils/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": "5908e095-9d4f-406a-9645-d460a563e0f6"
   }
 }
