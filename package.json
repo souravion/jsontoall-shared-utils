@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-lib": "ng build shared-utils",
-    "pack-lib": "cd dist/shared-utils && npm pack"
+    "pack-lib": "cd dist/shared-utils && npm pack",
+     "main": "dist/shared-utils/fesm2020/shared-utils.js",
+    "types": "dist/shared-utils/shared-utils.d.ts"
   },
   "prettier": {
     "overrides": [
