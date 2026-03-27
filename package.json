@@ -9,8 +9,11 @@
     "test": "ng test",
     "build-lib": "ng build shared-utils",
     "pack-lib": "cd dist/shared-utils && npm pack",
-     "main": "dist/shared-utils/fesm2020/shared-utils.js",
-    "types": "dist/shared-utils/shared-utils.d.ts"
+    "prepare": "npm run build-lib",
+    
+    "main": "./dist/shared-utils/fesm2022/jsontoall-shared-utils.mjs",
+    "typings": "./dist/shared-utils/index.d.ts"
+    
   },
   "prettier": {
     "overrides": [
